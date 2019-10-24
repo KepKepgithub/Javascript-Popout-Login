@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap");
+//font-family: 'Share Tech Mono', monospace;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 2rem;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-size: 2rem;
+
+  background-color: rgb(233, 187, 103);
+  color: #333333;
+
+  &:hover {
+    background-color: rgb(223, 145, 0);
+  }
+}
+
+.popContainer {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  display: none;
+
+  .popContent {
+    background-color: white;
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    .signIn {
+      display: flex;
+      flex-direction: column;
+      //justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+
+      h1 {
+        font-family: "Share Tech Mono", monospace;
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        margin-bottom: 2.3rem;
+      }
+      input {
+        margin-bottom: 1.5rem;
+        border: none;
+        background-color: #d4d1d1;
+        padding: 0.5rem;
+        padding-left: 0.7rem;
+      }
+      .forgot {
+        text-decoration: none;
+        color: rgb(56, 56, 56);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .comfirmBtn {
+        background-color: rgb(230, 149, 0);
+        padding: 0.7rem 2rem;
+        color: white;
+        margin-top: 2rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+          background-color: rgba(230, 149, 0, 0.8);
+        }
+      }
+    }
+
+    .signUp {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-family: "Share Tech Mono", monospace;
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        margin-bottom: 2.3rem;
+      }
+      input {
+        margin-bottom: 1.2rem;
+        border: none;
+        background-color: #d4d1d1;
+        padding: 0.5rem;
+        padding-left: 0.7rem;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(56, 56, 56);
+      }
+      .comfirmBtn {
+        background-color: rgb(230, 149, 0);
+        padding: 0.7rem 2rem;
+        color: white;
+        margin-top: 0.5rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        &:hover {
+          background-color: rgba(230, 149, 0, 0.8);
+        }
+      }
+    }
+
+    .close {
+      z-index: 20;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 28px;
+      &:hover,
+      &:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px;
+
+  position: absolute;
+  z-index: 3;
+  width: 50%;
+  height: 100%;
+  background-color: orange;
+  transform: translateX(100%);
+  color: white;
+  .fade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeEffect1 1s;
+    h1 {
+      text-align: center;
+      margin-bottom: 1em;
+      font-family: "Share Tech Mono", monospace;
+    }
+
+    .ChangeBtn {
+      text-decoration: none;
+      background-color: white;
+      color: orange;
+
+      padding: 0.7rem 2rem;
+      border-radius: 2rem;
+      margin-top: 2rem;
+
+      text-transform: uppercase;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    .textChangeP {
+    }
+  }
+}
+
+@keyframes fadeEffect1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
